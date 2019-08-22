@@ -22,14 +22,14 @@ for (let row = 0; row < boardSize; row++) {
   let space = row % 2 === 0;
   for (let index = 0; index < boardSize; index++) {
     if (space) {
-      board += " "
+      board += " ";
     } else {
-      board += "#"
+      board += "#";
     }
-    space = !space
+    space = !space;
   }
-  board += "\n"
+  board += "\n";
 }
 
-console.log(board)
+console.log(board);
 
