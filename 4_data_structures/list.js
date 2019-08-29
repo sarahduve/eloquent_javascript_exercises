@@ -11,7 +11,7 @@
 
 // Your code here.
 
-console.log(arrayToList([10, 20]));
+// console.log(arrayToList([10, 20]));
 // → {value: 10, rest: {value: 20, rest: null}}
 console.log(listToArray(arrayToList([10, 20, 30])));
 // // → [10, 20, 30]
@@ -50,13 +50,13 @@ function listToArray(list, values=[]) {
 }
 
 function prepend(value, list) {
-  return {value: value, rest: list};
+  return {value, rest: list};
 }
 
 function nth(list, index, currentIndex=0) {
-  if (currentIndex === index) {
+  if (index === 0) {
     return list.value;
   } else {
-    return nth(list.rest, index, currentIndex + 1);
+    return nth(list.rest, index - 1);
   }
 }
