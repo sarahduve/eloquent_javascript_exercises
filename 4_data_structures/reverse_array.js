@@ -23,7 +23,7 @@ console.log(arrayValue);
 function reverseArray(array) {
   newArray = [];
   for (let item of array) {
-    newArray.unshift(item)
+    newArray.unshift(item);
   }
   return newArray;
 }
@@ -31,7 +31,7 @@ function reverseArray(array) {
 function reverseArrayInPlace(array) {
   for (i = 0; i < Math.floor(array.length / 2); i++) {
     let frontItem = array[i];
-    let backIndex = array.length - 1 - i
+    let backIndex = array.length - 1 - i;
     array[i] = array[backIndex];
     array[backIndex] = frontItem;
   }

@@ -32,4 +32,3 @@ for (let row = 0; row < boardSize; row++) {
 }
 
 console.log(board);
-

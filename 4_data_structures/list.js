@@ -22,25 +22,25 @@ console.log(nth(arrayToList([10, 20, 30]), 1));
 
 // loop version
 function loopArrayToList(array) {
-  let obj = {"value": array.pop(), "rest": null};
+  let obj = { value: array.pop(), rest: null };
   while (array.length > 0) {
     value = array.pop();
-    obj = {"value": value, "rest": obj};
+    obj = { value: value, rest: obj };
   }
   return obj;
 }
 
 // recursive version
-function arrayToList(array, rest=null) {
+function arrayToList(array, rest = null) {
   if (array.length > 0) {
     value = array.pop();
-    return arrayToList(array, {"value": value, "rest": rest});
+    return arrayToList(array, { value: value, rest: rest });
   } else {
     return rest;
   }
 }
 
-function listToArray(list, values=[]) {
+function listToArray(list, values = []) {
   if (list === null) {
     return values;
   } else {
@@ -50,10 +50,10 @@ function listToArray(list, values=[]) {
 }
 
 function prepend(value, list) {
-  return {value, rest: list};
+  return { value, rest: list };
 }
 
-function nth(list, index, currentIndex=0) {
+function nth(list, index, currentIndex = 0) {
   if (index === 0) {
     return list.value;
   } else {

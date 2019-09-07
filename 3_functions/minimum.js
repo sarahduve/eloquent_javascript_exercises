@@ -12,7 +12,7 @@
 
 function min(x, y) {
   if (x === y) {
-    return "Inputs are equal!";
+    return 'Inputs are equal!';
   } else {
     let min = x < y ? x : y;
     return min;
