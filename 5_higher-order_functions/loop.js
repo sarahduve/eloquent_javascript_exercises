@@ -15,6 +15,7 @@ function loop(value, testFn, updateFn, bodyFn) {
     loop(value, testFn, updateFn, bodyFn);
   }
 }
+
 loop(3, n => n > 0, n => n - 1, console.log);
 // → 3
 // → 2
